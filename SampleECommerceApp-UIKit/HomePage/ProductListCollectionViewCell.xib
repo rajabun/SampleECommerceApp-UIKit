@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductList" id="WMn-6p-O62" customClass="ProductListCollectionViewCell" customModule="SampleECommerceApp_UIKit" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ScG-wf-SQ6">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="XTY-uG-ay6"/>
+                            <constraint firstAttribute="width" constant="300" id="sX1-ZR-5zd"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama Barang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVl-1e-QOc">
+                        <rect key="frame" x="13" y="211" width="281" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6Z-zj-miN">
+                        <rect key="frame" x="0.0" y="175" width="25" height="25"/>
+                        <state key="normal" image="heart" catalog="system"/>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="fSx-DU-BMy"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="lVl-1e-QOc" secondAttribute="trailing" constant="6" id="3JW-cv-6u6"/>
+                <constraint firstItem="lVl-1e-QOc" firstAttribute="top" secondItem="m6Z-zj-miN" secondAttribute="bottom" constant="11" id="8ME-uX-WmX"/>
+                <constraint firstAttribute="bottom" secondItem="lVl-1e-QOc" secondAttribute="bottom" constant="68" id="Da0-w0-Tkk"/>
+                <constraint firstAttribute="trailing" secondItem="ScG-wf-SQ6" secondAttribute="trailing" id="OKk-kx-Tzy"/>
+                <constraint firstItem="lVl-1e-QOc" firstAttribute="leading" secondItem="WMn-6p-O62" secondAttribute="leading" constant="13" id="UOP-9N-uKD"/>
+                <constraint firstItem="lVl-1e-QOc" firstAttribute="top" secondItem="ScG-wf-SQ6" secondAttribute="bottom" constant="11" id="dsE-RY-yWN"/>
+                <constraint firstAttribute="trailing" secondItem="m6Z-zj-miN" secondAttribute="trailing" constant="275" id="f5C-G8-xF2"/>
+                <constraint firstItem="ScG-wf-SQ6" firstAttribute="leading" secondItem="WMn-6p-O62" secondAttribute="leading" id="jGI-ag-zUU"/>
+                <constraint firstItem="m6Z-zj-miN" firstAttribute="leading" secondItem="WMn-6p-O62" secondAttribute="leading" id="llQ-pm-UQH"/>
+                <constraint firstItem="ScG-wf-SQ6" firstAttribute="top" secondItem="WMn-6p-O62" secondAttribute="top" id="tD1-OU-BGP"/>
+                <constraint firstItem="m6Z-zj-miN" firstAttribute="top" secondItem="WMn-6p-O62" secondAttribute="top" constant="175" id="tiH-Zc-vWA"/>
+            </constraints>
+            <connections>
+                <outlet property="productListButton" destination="m6Z-zj-miN" id="zVB-I1-6ky"/>
+                <outlet property="productListImage" destination="ScG-wf-SQ6" id="JzR-Cp-O8h"/>
+                <outlet property="productListTitle" destination="lVl-1e-QOc" id="Rp1-8u-kwa"/>
+            </connections>
+            <point key="canvasLocation" x="86.956521739130437" y="79.6875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+    </resources>
+</document>
